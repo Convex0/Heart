@@ -1,11 +1,18 @@
-int i = 1;
-int counter = 0;
-void main() {
-    for (i = 1; i <= 5; i++) {
-        counter += i;
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char text[200];
+
+    printf("Enter text: ");
+    fgets(text, sizeof(text), stdin);
+
+    // Convert to uppercase
+    for (int i = 0; text[i] != '\0'; i++) {
+        text[i] = toupper(text[i]);
     }
-    printf("Final counter value %d\n", counter);
-    for (int n = 1; n = 5; n++) {
-        printf("%d\n", n + i);
-    }
+
+    printf("Uppercase: %s", text);
+
+    return 0;
 }
